@@ -1,0 +1,103 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <link rel="stylesheet" href="{% static 'CSSPages/resultStyle.css' %}">
+</head>
+
+<body>
+    <section class="header">
+        <div class="rectangle">
+            <div class="logo">
+                <a href="{% url 'rolls:search' %}">
+                    <img src="../../static/assets/images/Logo.png">
+                </a>
+            </div>
+            <nav>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="{% url 'rolls:search' %}">Home</a></li>
+                        <li><a href="{% url 'rolls:add' %}">Add</a></li>
+                        <li><a href="{% url 'rolls:active' %}">Active</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+                
+            <div class="text">
+                <h1 id="p1">Student's</h1><br>
+                <h1 id="para">Results</h1><br>
+                <p id="p2">Here you can see the results for students</p>
+            </div>
+            <div class="main">
+                <input type="search" name="box" placeholder="search" id="bar">
+                <!-- <a href="chrome://newtab/"> -->
+                <button type="submit" value="send">
+                    <!-- <div> -->
+                    <img src="../../static/assets/images/homepage copy.png">
+                    <!-- </div> -->
+                </button>
+                <br>
+                <br>
+                <a href="{% url 'rolls:searchResult' %}">search</a>
+                <!-- </a> -->
+
+            </div>
+
+        </div>
+    </section>
+    <section class="Student">
+        <h1>Mohammed Nasser Abdel Samea</h1>
+        <p>20200479</p>
+        <div>
+            <a href="{% url 'rolls:edit' %}">Edit information</a>
+            <a href="{% url 'rolls:assign' %}">Add department</a>
+        </div>
+        <hr style="height:1px;border-width:0;color:gray;background-color:gray ;">
+        <h1>Omar Mohammed Mostafa</h1>
+        <p>20200359</p>
+        <div>
+            <a href="{% url 'rolls:edit' %}">Edit information</a>
+            <a href="{% url 'rolls:assign' %}">Add department</a>
+        </div>
+        <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+        <h1>Menna Allah Ahmed Abdel Aziz</h1>
+        <p>20201175</p>
+        <div>
+            <a href="{% url 'rolls:edit' %}">Edit information</a>
+            <a href="{% url 'rolls:assign' %}">Add department</a>
+        </div>
+        <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+        <h1>Fatma Ahmed Abdel Fadeel</h1>
+        <p>20200373</p>
+        <div>
+            <a href="{% url 'rolls:edit' %}">Edit information</a>
+            <a href="{% url 'rolls:assign' %}">Add department</a>
+        </div>
+        <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+        <h1>Omar Alaa Saad</h1>
+        <p>20200356</p>
+        <div>
+            <a href="{% url 'rolls:edit' %}">Edit information</a>
+            <a href="{% url 'rolls:assign' %}">Add department</a>
+        </div>
+        <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+
+        <h1>Sahar Hamdi Abdel Hafeez</h1>
+        <p>ID : 20201089</p>
+        <div>
+            <a href="{% url 'rolls:edit' %}">Edit information</a>
+            <a href="{% url 'rolls:assign' %}">Add department</a>
+        </div>
+        <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+
+    </section>
+</body>
+
+</html>

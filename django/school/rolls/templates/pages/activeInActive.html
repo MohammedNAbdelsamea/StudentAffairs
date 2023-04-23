@@ -1,0 +1,103 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <title>
+        Students Status
+    </title>
+    <link rel="stylesheet" href="{% static 'CSSPages/activeStyle.css' %}">
+    <script src="{% static 'javaScript/activeScript.js' %}"></script>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="search.html"><img src="../../static/assets/images/Logo.png"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="{% url 'rolls:search' %}">Home</a></li>
+                    <li><a href="{% url 'rolls:add' %}">Add</a></li>
+                    <li><a href="{% url 'rolls:active' %}">Active</a></li>
+                    <li><a href="">Contact</a><select name=Nnum>
+                        <option value="----">----</option>
+                        <option value="num1">01150903601</option>
+
+                    </select></li>
+
+
+                    <li><a href="">About </a><select name="info">
+                        <option value="----">----</option>
+                        <option value="nasser">Mohamed Nasser 20200479 </option>
+                        <option value="nasser">Mohamed Nasser 20200479 </option>
+                        <option value="nasser">Mohamed Nasser 20200479 </option>
+                        <option value="nasser">Mohamed Nasser 20200479 </option>
+                        <option value="nasser">Mohamed Nasser 20200479 </option>
+                        <option value="nasser">Mohamed Nasser 20200479 </option>
+                        </select></li>
+                    
+                    
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <div class="Text-box">
+        <h1 id="first">Student's <br></h1>
+        <h1 id="second">Active/InActive</h1>
+        <p>Here You can Assign the active of students</p>
+
+    </div>
+    <div class="campus-col">
+        <img src="../../static/assets/images/longimage.jpg">
+        <button onclick="submit()" class="btn">Submit</button>
+    </div>
+
+    <div class="student-list">
+        <h2>Student List</h2>
+    </div>
+
+    <table>
+        <h3>view student list
+            <hr>
+        </h3>
+        <tr>
+            <!-- <th>S No.</th> -->
+            <th> Username</th>
+            <th>Gender</th>
+            <th>ID</th>
+            <th>Level</th>
+            <th>Status</th>
+        </tr>
+
+        {% for s in student%}
+        
+        <tbody>
+            <tr>
+                <!-- <td>{{s.sNo}}</td> -->
+                <td>{{s.name}}</td>
+                <td>{{s.gender}}</td>
+                <td>{{s.idenNum}}</td>
+                <td>{{s.level}}</td>
+                <td>
+                    <label class="switch">
+                        
+                        <input type="checkbox" name="cbox" id="cbox" onchange="onCbChange('cbox')">
+                       
+                        <span class="slider round"></span>
+                       
+                    </label>
+                   {{s.status}}
+                   
+                   
+                </td>
+            </tr>
+
+        </tbody>
+        {% endfor %} 
+    </div>
+
+</body>
+
+</html>

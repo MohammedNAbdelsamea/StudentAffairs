@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cairo university </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'CSSPages/editSytle.css' %}">
+    <script src="vali.js">
+    </script>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="{% url 'rolls:search' %}"><img src="../../static/assets/images/Logo.png"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="{% url 'rolls:search' %}">Home</a></li>
+                    <li><a href="{% url 'rolls:add' %}">Add</a></li>
+                    <li><a href="{% url 'rolls:active' %}">Active</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text-box">
+            <h1 id="Studnts">Student's</h1>
+            <h1>edit info</h1>
+            <p>
+                Here you can edit the student information, make sure that you submit after finishing
+            </p>
+        </div>
+    </section>
+
+    <section class="inner-page">
+        <div class="container">
+            <header>Edit Student</header>
+            <form action="#">
+                <div class="form first">
+                    <div class="details personal">
+                        <span class="title">Personal Details</span>
+
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="Enter your name" required value="Omar Mohamed">
+                            </div>
+
+                            <div class="input-field">
+                                <label>Date</label>
+                                <input type="date" placeholder="Enter birth date" required value="2020-06-04">
+                            </div>
+
+
+
+                            <div class="input-field">
+                                <label>Mobile Number</label>
+                                <input type="tel" placeholder="Enter mobile number" required
+                                    onkeypress="return onlyNumberKey(event)" maxlength="11" value="01127456120">
+                            </div>
+
+                            <div class=" input-field">
+                                <label>Gender</label>
+                                <select required>
+                                    <option disabled selected>Select Gender</option>
+                                    <option selected>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="details ID">
+                        <span class="title">Faculty Details</span>
+
+                        <div class="fields">
+
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="email" placeholder="Enter your Email" required
+                                    value="omar.m.elesawy2002@gmail.com">
+                            </div>
+
+                            <div class="input-field">
+                                <label>ID</label>
+                                <input type="tel" placeholder="Enter your ID" required
+                                    onkeypress="return onlyNumberKey(event)" maxlength="8" value="20200359">
+                            </div>
+                            <div class="input-field">
+                                <label>GPA</label>
+                                <input id="GPA" type="tel" placeholder="Enter your GPA" required maxlength="4"
+                                    onkeypress="return onlyNumberKey(event)" value="2.79">
+                            </div>
+
+                            <div class="input-field">
+                                <label>Status</label>
+                                <select required>
+                                    <option disabled selected>Select Status</option>
+                                    <option selected>Active</option>
+                                    <option>Inactive</option>
+
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label>Level</label>
+                                <select required>
+                                    <option disabled selected>Select Level</option>
+                                    <option>1</option>
+                                    <option selected>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label>Department</label>
+                                <select disabled>
+                                    <option disabled selected>Select Department</option>
+                                    <option>CS</option>
+                                    <option>IS</option>
+                                    <option>AI</option>
+                                    <option>IT</option>
+                                    <option>DS</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <div class="backBtn" id="backBtn">
+                                <i class="uil uil-navigator"></i>
+                                <span class="btnText">Back</span>
+                            </div>
+
+                            <button id="myBtn">
+                                <span class="btnText">Submit</span>
+                                <i class="uil uil-navigator"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <br>
+</body>
+<script src="{% static 'JavaScript/editScript.js' %}">
+</script>
+
+</html>
